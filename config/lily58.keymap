@@ -54,13 +54,13 @@
 // |      |       |     |     |      |      |                   |      |       |       |      |       |       |
 // |      |INSERT |  7  |  8  |  9   |  =   |                   | HOME | PG_UP | PG_DN | END  | :     |       |
 // |      |DELETE |  4  |  5  |  6   |  -   |                   | <-   |   v   |  ^    |  ->  | ;     |       |
-// |      |   0   |  1  |  2  |  3   |  +   |        |  |       |      |       |       |      | CAPS  |       |
+// |      |   0   |  1  |  2  |  3   |  +   |        |  |       |      |       |       |  ~   | CAPS  |       |
 //                            |      |      |  ESC   |  |       |      |       |       |
                         bindings = <
 &trans  &trans          &trans  &trans  &trans  &trans                          &trans      &trans    &trans    &trans     &trans     &trans
 &trans  &kp INS         &kp N7  &kp N8  &kp N9  &kp EQUAL                       &kp HOME    &kp PG_DN &kp PG_UP &kp END    &kp COLON  &trans
 &trans  &kp DEL         &kp N4  &kp N5  &kp N6  &kp MINUS                       &kp LEFT    &kp DOWN  &kp UP    &kp RIGHT  &kp SEMI   &trans
-&trans  &kp N0          &kp N1  &kp N2  &kp N3  &kp KP_PLUS  &trans   &trans    &trans      &trans    &trans    &trans     &caps_word &trans
+&trans  &kp N0          &kp N1  &kp N2  &kp N3  &kp KP_PLUS  &trans   &trans    &trans      &trans    &trans    &kp TILDE  &caps_word &trans
                         &trans  &trans  &trans  &trans       &kp ESC  &trans    &trans      &trans
                         >;
                 };
