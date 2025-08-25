@@ -28,6 +28,18 @@
             		if-layers = <1 2>;
             		then-layer = <3>;
         	};
+
+        	// Fancy/Gaming override tri-layer
+        	tri_layer_fancy {
+            		if-layers = <1 2 4>;   // 1=left, 2=right, 4=fancy
+            		then-layer = <3>;      // still activate tri_layer, but while fancy is active
+        	};
+
+        	// Force fancy to be base if toggled
+        	fancy_override {
+            		if-layers = <4>;       // fancy toggled
+            		then-layer = <4>;
+        	};
     	};
 
 	keymap {
@@ -92,7 +104,7 @@
 &trans  &trans          &trans &trans   &trans      &trans                           &trans      &trans    &trans    &trans     &trans        &trans
 &trans  &sys_reset      &trans &trans   &trans      &bt BT_SEL 0                     &trans      &trans    &trans    &trans     &sys_reset    &trans
 &trans  &bootloader     &trans &trans   &trans      &bt BT_SEL 1                     &trans      &trans    &trans    &trans     &bootloader   &trans
-&trans  &trans          &trans &trans   &bt BT_CLR  &bt BT_SEL 2  &trans   &trans    &trans      &trans    &trans    &trans     &trans        &trans
+&trans  &trans          &trans &trans   &bt BT_CLR  &bt BT_SEL 2  &trans   &trans    &tog 4      &trans    &trans    &trans     &trans        &trans
                         &trans &trans   &trans      &trans        &trans   &trans    &trans      &trans
                         >;
         	};
