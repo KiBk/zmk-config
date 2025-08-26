@@ -100,7 +100,7 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│  TAB     │  Q       │  W       │  E       │  R       │   │          │          │          │          │          │
-           &kp TAB     &kp Q      &kp W      &kp E      &kp R          &trans     &trans     &trans     &trans     &tans
+           &kp TAB     &kp Q      &kp W      &kp E      &kp R          &trans     &trans     &trans     &trans     &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  CTRL    │  A       │  S       │  D       │  F       │   │          │          │          │          │          │
            &kp LCTRL   &kp A      &kp S      &kp D      &kp F          &trans     &trans     &trans     &trans     &trans
