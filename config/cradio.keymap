@@ -106,7 +106,7 @@
            &kp LCTRL   &kp A      &kp S      &kp D      &kp F          &trans     &trans     &trans     &trans     &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  SHIFT   │  Z       │  X       │  C       │  V       │   │          │          │          │          │          │
-           &kp LSHFT   &kp Z      &kp X      &kp C      &kp V          &trans     &trans     &trans     &trans     &to 2
+           &kp LSHFT   &kp Z      &kp X      &kp C      &kp V          &trans     &trans     &trans     &trans     &to 0
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &kp ALT    &kp SPACE      &kp ENTER  &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
