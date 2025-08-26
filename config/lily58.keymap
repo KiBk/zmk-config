@@ -86,13 +86,13 @@
 // |      |            |     |     |          |           |                   |      |       |       |      |            |       |
 // |      | RESET      |     |     |          | PROFILE 0 |                   |      |       |       |      | RESET      |       |
 // |      | BOOTLOADER |     |     |          | PROFILE 1 |                   |      |       |       |      | BOOTLOADER |       |
-// |      |            |     |     | CLEAR BT | PROFILE 2 |        |  |       |      |       |       |      |            |       |
+// |      |            |     |     | CLEAR BT | PROFILE 2 |        |  |       |      |       |       |      | (4)        |       |
 //                                 |          |           |        |  |       |      |       |       |
                         bindings = <
 &trans  &trans          &trans &trans   &trans      &trans                           &trans      &trans    &trans    &trans     &trans        &trans
 &trans  &sys_reset      &trans &trans   &trans      &bt BT_SEL 0                     &trans      &trans    &trans    &trans     &sys_reset    &trans
 &trans  &bootloader     &trans &trans   &trans      &bt BT_SEL 1                     &trans      &trans    &trans    &trans     &bootloader   &trans
-&trans  &trans          &trans &trans   &bt BT_CLR  &bt BT_SEL 2  &trans   &trans    &to 4       &to 0     &trans    &trans     &trans        &trans
+&trans  &trans          &trans &trans   &bt BT_CLR  &bt BT_SEL 2  &trans   &trans    &trans      &trans    &trans    &trans     &to 4         &trans
                         &trans &trans   &trans      &trans        &trans   &trans    &trans      &trans
                         >;
         	};
@@ -102,13 +102,13 @@
 // |  ESC  |  1  |  2  |  3   |  4   |  5      |                   |  6        |  7    |  8    |  9   |   0   |   `     |
 // |  TAB  |  Q  |  W  |  E   |  R   |  T      |                   |  Y        |  U    |  I    |  O   |   P   |   -     |
 // |  CTRL |  A  |  S  |  D   |  F   |  G      |                   |  H        |  J    |  K    |  L   |   ;   |  ' "    |
-// | SHIFT |  Z  |  X  |  C   |  V   |  B      |   "["  |  |  "]"  |  N        |  M    | , <   | . >  |  / ?  | ESC/ALT |
+// | SHIFT |  Z  |  X  |  C   |  V   |  B      |   "["  |  |  "]"  |  N        |  M    | , <   | . >  |  (0)  | ESC/ALT |
 //                     | ALT  | GUI  | LEFT/TAB|  SPACE |  | ENTER | RIGHT/BSPC| BSPC  | GUI   |
 			bindings = <
 &kp ESC   &kp N1 &kp N2 &kp N3   &kp N4   &kp N5                                     &kp N6      &kp N7   &kp N8    &kp N9  &kp N0   &kp GRAVE
 &kp TAB   &kp Q  &kp W  &kp E    &kp R    &kp T                                      &kp Y       &kp U    &kp I     &kp O   &kp P    &kp MINUS
 &kp LCTRL &kp A  &kp S  &kp D    &kp F    &kp G                                      &kp H       &kp J    &kp K     &kp L   &kp SEMI &kp SQT
-&kp LSHFT &kp Z  &kp X  &kp C    &kp V    &kp B      &kp LBKT         &kp RBKT       &kp N       &kp M    &kp COMMA &kp DOT &kp FSLH &ht RALT ESC
+&kp LSHFT &kp Z  &kp X  &kp C    &kp V    &kp B      &kp LBKT         &kp RBKT       &kp N       &kp M    &kp COMMA &kp DOT &to 0    &ht RALT ESC
                         &kp LALT &kp LGUI &lt 2 TAB  &kp SPACE        &kp RET        &lt 1 BSPC  &kp BSPC &kp RGUI
 			>;
 		};
